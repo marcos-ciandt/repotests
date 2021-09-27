@@ -42,14 +42,13 @@ jobs:
           project_id: ${{ secrets.gcp_project }}
           credentials: ${{ secrets.gcp_credentials }}
           runtime: nodejs10
-          entry_point: myHelloHttp
+          #entry_point: myHelloHttp
           
       - name: Update deployment status (success)
         if: success()
         uses: chrnorm/deployment-status@releases/v1
         with:
           token: "${{ github.token }}"
-          #target_url: http://my-app-url.com
           state: "success"
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
 
@@ -58,6 +57,5 @@ jobs:
         uses: chrnorm/deployment-status@releases/v1
         with:
           token: "${{ github.token }}"
-          #target_url: http://my-app-url.com
           state: "failure"
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
