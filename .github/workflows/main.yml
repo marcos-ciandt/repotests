@@ -40,6 +40,8 @@ jobs:
         with:
           name: myHelloHttp
           runtime: nodejs10
+          project_id: ${{ secrets.gcp_project }}
+          credentials: ${{ secrets.gcp_credentials }}
           entry_point: myHelloHttp
           
       - name: Update deployment status (success)
