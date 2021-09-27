@@ -39,8 +39,6 @@ jobs:
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: myHelloHttp
-          project_id: ${{ secrets.gcp_projects }}
-          credentials: ${{ secrets.gcp_credentials }}
           runtime: nodejs10
           entry_point: myHelloHttp
           
