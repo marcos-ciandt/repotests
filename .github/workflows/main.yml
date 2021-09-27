@@ -39,10 +39,10 @@ jobs:
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: myHelloHttp
-          project_id: ${{ secrets.gcp_project }}
+          #project_id: ${{ secrets.gcp_project }}
           credentials: ${{ secrets.gcp_credentials }}
           runtime: nodejs10
-          #entry_point: myHelloHttp
+          entry_point: myHelloHttp
           
       - name: Update deployment status (success)
         if: success()
