@@ -3,7 +3,7 @@
 //TODO how to especify a name different from function.js and how to 
 // deploy this lib escape-html without error
 
-/** 
+/**
  * HTTP Cloud Function.
  *
  * @param {Object} req Cloud Function request context.
