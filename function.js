@@ -13,5 +13,5 @@
  */
 exports.myHelloHttp = (req, res) => {
   //res.send(`Hello ${escapeHtml(req.query.name || req.body.name || 'World')}!`);
-  res.send('Hello World!');
+  res.send('Hello World! ');
 };
